@@ -15,5 +15,6 @@
     "gulp-less": "^3.0.5",
     "gulp-useref": "^3.0.6",
     "gulp-webserver": "^0.9.1"
-  }
+  },
+  "dependencies": {}
 }
