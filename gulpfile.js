@@ -46,7 +46,7 @@ gulp.task('webserver', function() {
     gulp.src(dist)
         .pipe(webserver({
             livereload: true,
-            directoryListing: true,
+            directoryListing: false,
             port: 8003,
             path: '/'
         }));
@@ -69,7 +69,7 @@ gulp.task('watch', function () {
     });
 });
 // 开发
-gulp.task('dev', ['style-pre', 'copy']);
+gulp.task('dev', ['style-pre', 'copy', 'webserver', 'watch']);
 // 生产
 //  1.编译less/sass
 //  2.加前缀
