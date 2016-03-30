@@ -38,6 +38,8 @@ gulp.task('copy', ['style-pre'], function () {
         .pipe(gulp.dest(dist + '/js'));
     gulp.src('src/img/**')
         .pipe(gulp.dest(dist + '/img'));
+    gulp.src('src/font/**')
+        .pipe(gulp.dest(dist + '/font'));
     console.log('复制文件');
 });
 
@@ -47,7 +49,7 @@ gulp.task('webserver', function() {
         .pipe(webserver({
             livereload: true,
             directoryListing: false,
-            port: 8003,
+            port: 8004,
             path: '/'
         }));
 });
